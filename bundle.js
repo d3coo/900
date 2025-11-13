@@ -2,6 +2,7 @@
 // Main Jailbreak Function =======================================================================
 //================================================================================================
 async function doJBwithPSFreeLapseExploit() {
+  window.log("Unsupported platform detected!\nRunning DEMO operation...\n");
   window.log("Starting PSFree Exploit...");
   try {
     window.log("PSFree STAGE 1/3: UAF SSV");
@@ -16,9 +17,13 @@ async function doJBwithPSFreeLapseExploit() {
   try {
     window.log('Lapse Setup');
     window.log('Lapse STAGE 1/5: Double free AIO queue entry');
+    window.log(' - Won race at attempt: 0');
     window.log('Lapse STAGE 2/5: Leak kernel addresses');
+    window.log(' - Found target_id at batch: 42');
     window.log('Lapse STAGE 3/5: Double free SceKernelAioRWRequest');
+    window.log(' - Aliased pktopts at attempt: 0');
     window.log('Lapse STAGE 4/5: Get arbitrary kernel read/write');
+    window.log(' - Found reclaim sd at attempt: 0');
     window.log('Lapse STAGE 5/5: Patch kernel');
     window.log("\nKernel exploit succeeded");
     window.log("AIO fixes applied");

@@ -67,7 +67,7 @@
   <script>
     // Logging utility
     const outputConsole = document.getElementById("console");
-    window.log = (msg) => { outputConsole.textContent += msg + "\n"; };
+    window.log = (msg, color="#cccccc") => { outputConsole.innerHTML += `<span style="color:${color}">${msg}</span><br>`; };
     // Event definitions
     addEventListener('unhandledrejection', event => {
       const reason = event.reason;
@@ -96,7 +96,7 @@
       try {
         doJBwithPSFreeLapseExploit();
       } catch (error) {
-        window.log("An error occured during exploit: " + error);
+        window.log("An error occured during exploit: " + error, "red");
       }
     });
   </script>
